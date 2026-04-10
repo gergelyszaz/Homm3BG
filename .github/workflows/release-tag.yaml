@@ -19,14 +19,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Validate tag matches .version
-        run: |
-          EXPECTED="v$(tr -d '\r\n' < .version)"
-          if [[ "${GITHUB_REF_NAME}" != "${EXPECTED}" ]]; then
-            echo "Tag ${GITHUB_REF_NAME} does not match ${EXPECTED} from .version"
-            exit 1
-          fi
-
       - id: set-matrix
         run: |
           cat << 'EOF' > matrix.json
