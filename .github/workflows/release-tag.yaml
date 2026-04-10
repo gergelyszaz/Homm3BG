@@ -1,0 +1,112 @@
+name: Release From Tag
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  matrix-setup:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+      version: ${{ steps.set-version.outputs.version }}
+      file_version: ${{ steps.set-version.outputs.file_version }}
+      prerelease: ${{ steps.set-version.outputs.prerelease }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Validate tag matches .version
+        run: |
+          EXPECTED="v$(tr -d '\r\n' < .version)"
+          if [[ "${GITHUB_REF_NAME}" != "${EXPECTED}" ]]; then
+            echo "Tag ${GITHUB_REF_NAME} does not match ${EXPECTED} from .version"
+            exit 1
+          fi
+
+      - id: set-matrix
+        run: |
+          cat << 'EOF' > matrix.json
+          {
+            "include": [
+              { "language_name": "Magyar", "language": "hu", "display": "🇭🇺 Magyar"}
+            ]
+          }
+          EOF
+          echo "matrix=$(jq -c . matrix.json)" >> "$GITHUB_OUTPUT"
+
+      - id: set-version
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+          echo "file_version=${VERSION//./_}" >> "$GITHUB_OUTPUT"
+
+          if [[ "${VERSION}" == *-* ]]; then
+            echo "prerelease=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "prerelease=false" >> "$GITHUB_OUTPUT"
+          fi
+
+  digital_build:
+    needs: matrix-setup
+    name: "Digital / ${{ matrix.display }}"
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
+    uses: ./.github/workflows/pdf-build.yaml
+    with:
+      language: ${{ matrix.language }}
+      build_type: digital
+      file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ needs.matrix-setup.outputs.file_version }}"
+      artifact_retention_days: 7
+
+  printable_build:
+    needs: matrix-setup
+    name: "Printable / ${{ matrix.display }}"
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
+    uses: ./.github/workflows/pdf-build.yaml
+    with:
+      language: ${{ matrix.language }}
+      build_type: printable
+      file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ needs.matrix-setup.outputs.file_version }}_Printable"
+      convert_to_cmyk: true
+      artifact_retention_days: 7
+
+  economy_build:
+    needs: matrix-setup
+    name: "Printable Economy / ${{ matrix.display }}"
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.matrix-setup.outputs.matrix) }}
+    uses: ./.github/workflows/pdf-build.yaml
+    with:
+      language: ${{ matrix.language }}
+      build_type: economy
+      file_name: "Heroes3_${{ matrix.language_name }}_Rules_Rewrite_${{ needs.matrix-setup.outputs.file_version }}_Economy_Printable"
+      artifact_retention_days: 7
+
+  publish_release:
+    runs-on: ubuntu-latest
+    needs: [matrix-setup, digital_build, printable_build, economy_build]
+    steps:
+      - name: Download compiled PDFs
+        uses: actions/download-artifact@v8
+        with:
+          pattern: "Heroes3_*"
+          path: release-assets
+          merge-multiple: true
+
+      - name: Create or update GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: ${{ github.ref_name }}
+          prerelease: ${{ needs.matrix-setup.outputs.prerelease == 'true' }}
+          generate_release_notes: true
+          files: |
+            release-assets/*.pdf
