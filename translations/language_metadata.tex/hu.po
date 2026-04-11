@@ -31,7 +31,7 @@ msgstr "o."
 #. type: newcommand{#4}
 #: sections/language_metadata.tex:7
 msgid "\\pageshorthand\\,#1"
-msgstr "\\pageshorthand\\,#1"
+msgstr "#1.\\pageshorthand"
 
 #.  Command for equal spacing between location titles and pictures
 #. type: newcommand{#4}
