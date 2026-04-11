@@ -74,7 +74,7 @@ msgid ""
 "\n"
 msgstr ""
 "\\subsection*{Szkenárió indítása}\n"
-"Minden Kampányszkenárió elején állítsd be a bevételedet úgy, hogy a Frakciókockáidat a Várostáblán lévő Erőforrás-termelésjelző 10~\\svg{gold}, 0~\\svg{building_materials}, 0~\\svg{valuables} mezőire helyezed. Az egyes Szkenáriók speciális szabályai módosíthatják ezeket az értékeket.\n"
+"Minden Kampányszkenárió elején állítsd be a bevételedet úgy, hogy a Frakciókockáidat a Várostáblán lévő Nyersanyag-termelésjelző 10~\\svg{gold}, 0~\\svg{building_materials}, 0~\\svg{valuables} mezőire helyezed. Az egyes Szkenáriók speciális szabályai módosíthatják ezeket az értékeket.\n"
 "A Kampányok egyedi bónuszokat használnak, amelyek \\textbf{helyettesítik} a választott \\pagelink{Difficulty}{Nehézség} szokásos kezdő bónuszát.\n"
 "\n"
 

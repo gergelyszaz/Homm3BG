@@ -125,10 +125,10 @@ Map Locations:
 
 Resources:
    - "building materials" translates to "építőanyagok"
-   - "resource production tracker" translates to "erőforrás-termelésjelző"
-   - "resources" translates to "erőforrások"
+   - "resource production tracker" translates to "nyersanyag-termelésjelző"
+   - "resources" translates to "nyersanyagok"
    - "treasure die" translates to "kincskocka"
-   - "valuables" translates to "értéktárgyak"
+   - "valuables" translates to "drágakövek"
 
 Deck-building:
    - "ability card" translates to "képességkártya"
