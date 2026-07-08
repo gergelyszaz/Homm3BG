@@ -44,15 +44,13 @@ msgid ""
 "content."
 msgstr ""
 "\\pagetarget{Expansion Content} Számos kiegészítő jelent meg a Heroes III: "
-"The Board Game-hez, amelyek új játékelemeket vezetnek be. A legtöbb "
-"kiegészítőszabály közvetlenül ennek a szabálykönyvnek a megfelelő "
-"szakaszaiba van beillesztve, oda, ahová tartozik. Alább az összes kiegészítő "
-"tartalmának áttekintése található."
+"The Board Game-hez, új játékelemekkel. A szabályaik többnyire a megfelelő "
+"fejezetekbe épülnek be. Alább a kiegészítők tartalmának áttekintése olvasható."
 
 #. type: Plain text
 #: sections/expansion_content.tex:26
 msgid "\\textbf{The following contents are added by many of the expansions:}"
-msgstr "\\textbf{A következő tartalmakat több kiegészítő is hozzáadja:}"
+msgstr "\\textbf{A következő elemeket több kiegészítő is hozzáadja:}"
 
 #. type: multicols*
 #: sections/expansion_content.tex:26
@@ -120,8 +118,8 @@ msgid ""
 "\n"
 msgstr ""
 "\\subsection*{Új Térképhelyszínek}\n"
-"Minden kiegészítő új Térképhelyszíneket ad a játékhoz, amelyeket a Hőseid felfedezhetnek.\n"
-"Ezeket az \\pagelink{All Map Locations}{Összes Térképhelyszín} ismerteti.\n"
+"Minden kiegészítő új Térképhelyszíneket ad, amelyeket a Hőseid felfedezhetnek.\n"
+"Ezek leírását az \\pagelink{All Map Locations}{Összes Térképhelyszín} rész tartalmazza.\n"
 "\n"
 
 #. type: multicols*
@@ -145,7 +143,7 @@ msgid ""
 "\n"
 msgstr ""
 "\\subsection*{Varázslatiskolák}\n"
-"A \\pagelink{Schools of Magic}{Varázslatiskolák} nagyobb jelentőséget kapnak a kiegészítőkkel, mivel immár olyan kártyahatások is vannak, amelyek használják őket; például a Hőseid bizonyos Iskolákra specializálódhatnak, hogy erősebbé tegyék a Varázslataikat.\n"
+"A \\pagelink{Schools of Magic}{Varázslatiskolák} a kiegészítőkkel fontosabbá válnak: új kártyahatások használják őket, és Hőseid specializálódhatnak rájuk az erősebb Varázslatokért.\n"
 "\n"
 
 #. type: multicols*
@@ -158,8 +156,8 @@ msgid ""
 "\n"
 msgstr ""
 "\\subsection*{Egyedi kártyahatások saját komponensekkel}\n"
-"A különféle kiegészítők több új kártyája saját Jelzőkomponensekkel érkezik, és összetett hatásokat hoz a játékba.\n"
-"Ezeket külön a \\pagelink{Card Effect Keywords}{Kártyahatás-kulcsszavak} fejezet ismerteti.\n"
+"Több új kártya saját Jelzőkomponensekkel érkezik, és összetett hatásokat hoz a játékba.\n"
+"Ezeket a \\pagelink{Card Effect Keywords}{Kártyahatás-kulcsszavak} fejezet részletezi.\n"
 "\n"
 
 #. type: multicols*
@@ -171,7 +169,7 @@ msgid ""
 "\n"
 msgstr ""
 "\\subsection*{Még több a meglévőkből}\n"
-"Az új játékmenet-mechanikák mellett a kiegészítők a meglévő komponensek változatosságát is bővítik: új Frakciókkal, új Szkenáriókkal, új Varázslatokkal, új Hősökkel és új Ereklyékkel.\n"
+"Az új mechanikák mellett a kiegészítők a meglévő elemekből is többet adnak: új Frakciókat, Szcenáriókat, Varázslatokat, Hősöket és Ereklyéket.\n"
 "\n"
 
 #. type: Plain text
@@ -260,8 +258,8 @@ msgstr ""
 "  \\begin{wrapfigure}{l}{0.35\\textwidth}\n"
 "    \\includegraphics[width=\\linewidth]{\\boxcovers/conflux-box.png}\n"
 "  \\end{wrapfigure}\n"
-"  Tartalmazza a \\textbf{Conflux Frakciót}: elementalista és síkjáró vezetők irányítása alatt álló, minden elemhez kötődő mágikus lényeket.\\par\n"
-"  Új játékmenet-mechanikák: \\pagelink{Elemental Map Tiles}{Elementális Térképlapkák}, amelyek a Varázslatiskolákhoz igazodnak; mágikus \\pagelink{Monolith Tokens}{Monolitok}, amelyek lehetővé teszik, hogy Hőseid nagy távolságokat tegyenek meg a Térképen; egy új \\pagelink{Elemental Damage}{sebzéstípus}, amely figyelmen kívül hagyja a Védelmet; valamint egy egyedi Varázslathatás, amellyel \\pagelink{Summoning}{Elementál egységeket lehet idézni}, hogy segítsenek a harcban.  % TODO: fix link\n"
+"  Tartalmazza a \\textbf{Conflux Frakciót}: minden elemhez kötődő mágikus lényekkel.\\par\n"
+"  Új mechanikák: \\pagelink{Elemental Map Tiles}{Elementális Térképlapkák}, \\pagelink{Monolith Tokens}{Monolitok} a gyors utazáshoz, \\pagelink{Elemental Damage}{elemi sebzés} (figyelmen kívül hagyja a Védelmet), és \\pagelink{Summoning}{Elementálok idézése}.  % TODO: fix link\n"
 "\\end{expansion}\n"
 "\n"
 
