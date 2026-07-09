@@ -392,10 +392,10 @@ msgid ""
 msgstr ""
 "Resources:\n"
 "   - \"building materials\" translates to \"építőanyagok\"\n"
-"   - \"resource production tracker\" translates to \"erőforrás-termelésjelző\"\n"
-"   - \"resources\" translates to \"erőforrások\"\n"
+"   - \"resource production tracker\" translates to \"nyersanyag-termelésjelző\"\n"
+"   - \"resources\" translates to \"nyersanyagok\"\n"
 "   - \"treasure die\" translates to \"kincskocka\"\n"
-"   - \"valuables\" translates to \"értéktárgyak\"\n"
+"   - \"valuables\" translates to \"drágakövek\"\n"
 
 #. type: Plain text
 #: tools/translation-ai-prompts/prompt.txt:138

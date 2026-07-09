@@ -47,12 +47,12 @@ msgstr "\\columnbreak"
 #: sections/resources.tex:3
 msgid "\\pagetarget{Resources}{\\addsection{Resources}{\\skills/estates.png}}"
 msgstr ""
-"\\pagetarget{Resources}{\\addsection{Erőforrások}{\\skills/estates.png}}"
+"\\pagetarget{Resources}{\\addsection{Nyersanyagok}{\\skills/estates.png}}"
 
 #. type: index{#1}
 #: sections/resources.tex:3
 msgid "Resources"
-msgstr "Erőforrások"
+msgstr "Nyersanyagok"
 
 #. type: multicols
 #: sections/resources.tex:23
@@ -76,10 +76,10 @@ msgid ""
 "  \\includegraphics[width=0.8\\linewidth]{\\images/valuables.png}\n"
 "  \\imagecaption{Valuables \\phantom{Materials}}"
 msgstr ""
-"A játékban háromféle Erőforrás van: Arany \\svg{gold}, Építőanyagok \\svg{building_materials} és Értéktárgyak \\svg{valuables}.\n"
-"Az Erőforrásokat a játék során a \\pagelink{Town}{Városod} fejlesztésére, \\pagelink{Units}{egységek} toborzására és \\pagelink{spells}{Varázslatok} vásárlására költöd.\n"
-"Erőforrásokat a \\pagelink{Categories}{birtokba vett} \\pagelink{Mines}{Településekből és Bányákból}, valamint Kártyák kijátszásával és Erőforráskockák \\svg{resource_die} dobásával szerezhetsz.\n"
-"Valahányszor egy játékos Erőforrás-termelése nő vagy csökken, mozgasd az adott Erőforrás Kockáját a termelési sávján a megfelelő számú mezővel.\\par\n"
+"A játékban háromféle Nyersanyag van: Arany \\svg{gold}, Építőanyagok \\svg{building_materials} és Drágakövek \\svg{valuables}.\n"
+"Az Nyersanyagokat a játék során a \\pagelink{Town}{Városod} fejlesztésére, \\pagelink{Units}{egységek} toborzására és \\pagelink{spells}{Varázslatok} vásárlására költöd.\n"
+"Nyersanyagokat a \\pagelink{Categories}{birtokba vett} \\pagelink{Mines}{Településekből és Bányákból}, valamint Kártyák kijátszásával és Nyersanyagkockák \\svg{resource_die} dobásával szerezhetsz.\n"
+"Valahányszor egy játékos Nyersanyag-termelése nő vagy csökken, mozgasd az adott Nyersanyag Kockáját a termelési sávján a megfelelő számú mezővel.\\par\n"
 "\\begin{multicols}{3}\n"
 "  \\centering\n"
 "  \\vspace*{\\fill}\n"
@@ -92,7 +92,7 @@ msgstr ""
 "  \\columnbreak\n"
 "  \\vspace*{\\fill}\n"
 "  \\includegraphics[width=0.8\\linewidth]{\\images/valuables.png}\n"
-"  \\imagecaption{Értéktárgyak \\phantom{Materials}}"
+"  \\imagecaption{Drágakövek \\phantom{Materials}}"
 
 #. type: Plain text
 #: sections/resources.tex:27
@@ -102,13 +102,13 @@ msgid ""
 "There's no limit to the amount of Resources you can have."
 msgstr ""
 "A játékosok minden Szkenáriót az annak előkészítésében megadott mennyiségű "
-"Erőforrással kezdenek. Az Erőforrások \\pagelink{Trading}{el is "
-"cserélhetők}. Nincs felső korlátja annak, mennyi Erőforrásod lehet."
+"Nyersanyagsal kezdenek. Az Nyersanyagok \\pagelink{Trading}{el is "
+"cserélhetők}. Nincs felső korlátja annak, mennyi Nyersanyagod lehet."
 
 #. type: center
 #: sections/resources.tex:37
 msgid "\\imagecaption{Resource Production Tracker}"
-msgstr "\\imagecaption{Erőforrás-termelésjelző}"
+msgstr "\\imagecaption{Nyersanyag-termelésjelző}"
 
 #. type: Plain text
 #: sections/resources.tex:49
@@ -116,7 +116,7 @@ msgid ""
 "Possible Resource Die\\index{Resource Die}\\index{Dice} \\svg{resource_die} "
 "results:"
 msgstr ""
-"Lehetséges Erőforráskocka\\index{Resource Die}\\index{Dice} "
+"Lehetséges Nyersanyagkocka\\index{Resource Die}\\index{Dice} "
 "\\svg{resource_die} eredmények:"
 
 #. type: itemize
@@ -137,12 +137,12 @@ msgstr "[{\\svg[15]{4_building_materials}}] — 4 × Építőanyag"
 #. type: itemize
 #: sections/resources.tex:49
 msgid "[{\\svg[15]{1_valuables}}] — 1 × Valuables"
-msgstr "[{\\svg[15]{1_valuables}}] — 1 × Értéktárgy"
+msgstr "[{\\svg[15]{1_valuables}}] — 1 × Drágakő"
 
 #. type: itemize
 #: sections/resources.tex:49
 msgid "[{\\svg[15]{2_valuables}}] — 2 × Valuables"
-msgstr "[{\\svg[15]{2_valuables}}] — 2 × Értéktárgy"
+msgstr "[{\\svg[15]{2_valuables}}] — 2 × Drágakő"
 
 #. type: itemize
 #: sections/resources.tex:49
